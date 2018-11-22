@@ -1,0 +1,169 @@
+课程内容
+    面向对象理论
+    Python面向对象基础
+    深入Python面向对象
+
+面向对象概念
+    类
+    对象
+
+    属性
+    方法
+
+    封装
+
+    继承
+        Python支持多继承
+
+    多态
+
+    类的特性：
+        封装
+        继承
+        多态
+
+Python定义类：
+    class ClassName:
+        statement1:
+        ...
+        statement2:
+
+    构造函数：
+        def __init__(self,[...):
+
+    析构函数：
+        def __del__(self,[...):
+
+    历史遗留问题：
+
+    两个内建函数：
+        dir():              返回对象属性
+        type():             返回对象类型
+
+定义类的属性
+    直接在类里定义：
+
+    在构造函数里定义：
+
+定义类的方法：
+    函数和方法：
+        函数时直接调用
+        方法依附类存在
+
+    方法的访问控制
+        和属性一样
+            class Example:
+                def add(self):
+                    pass
+
+                def _minus(self):
+                    pass
+
+                def __multiply(self):
+                    pass
+
+        装饰器：
+            @classmethos        调用时使用类名，而不是某个对象
+            @property           像访问属性一样调用方法
+
+类的继承
+    定义类的继承
+        class DerivedClassName(BaseClassName):
+            ...
+
+    继承的子类
+        会继承父类的属性和方法
+        也可以自己定义，覆盖父类的属性和方法
+
+        用super()调用父类的方法
+        用类名调用父类的方法
+
+    子类的类型判断
+        isinstance
+        issubclass
+    多继承
+        class DriverClassName(Base1, Base2, Base3):
+            ...
+
+类的多态
+    多态的要素
+        继承
+        方法重写
+
+
+Python Magic Method
+    作用：
+
+    对象的创建和初始化
+        class Person:
+            def __ init__(self, name, age):
+                self.name = name
+                self.age = age
+
+        person = Person("pengda", 30)
+
+    创建类的对象                  初始化对象
+    def __new__(cls)            def __init__(self)
+
+    回收对象
+        def __del__()
+
+    类和运算符
+        比较运算符
+            __cmp__(self, other)
+            __eq__(self, other)         等于
+            __It__(self, other)         小于
+            __gt__(self, other)         大于
+
+        数字运算符
+            __add__(self, other)
+            __sub__(self, other)
+            __mul__(self, other)
+            __div__(self, other)
+
+        逻辑运算符
+            __or__(self, other)
+            __and__(self, other)
+
+    类的展现
+        转换为字符串
+            __str__
+            __repr__
+            __unicode__
+
+        展现对象属性
+            __dir__
+
+类的属性控制
+    访问控制？
+
+    设置对象属性
+        __setattr__(self, name, value)
+
+        def __setattr__(self, name, value):
+            self.__dict__[name] = value
+
+    查询对象属性
+        __getattr__(self, name)
+        __getattribute__(self, name)
+
+    删除对象属性
+        __delattr__(self, name)
+
+课程总结
+    面向对象理论
+        类和对象
+        属性和方法
+        继承
+
+    Python面向对象基础
+        定义类
+        定义类属性和方法
+        继承（多继承）
+
+    Magic Methos
+        构造对象
+        运算符
+        类的展现
+        类的属性访问（不要出现无限递归）
+

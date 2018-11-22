@@ -1,0 +1,26 @@
+web.py是什么？
+    web.py
+        一个非常轻量级的python web框架，简单而且功能强大
+    Python
+        简单、好学、易用、功能强大、灵活
+
+web.py安装
+    web.py管网
+        http://webpy.org
+    python安装
+
+    web.py安装
+        pip install web.py
+
+web开发基础
+    HTML、CSS、JS
+
+First Demo
+
+URL映射
+    URL完全匹配
+        /index
+    URL模糊匹配
+        /post/\d+
+    URL带组匹配
+        /post.(\d+)

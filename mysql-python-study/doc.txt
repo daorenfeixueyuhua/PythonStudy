@@ -1,0 +1,44 @@
+		python操作数据库：
+
+Python DB API:
+	(Python访问数据库的统一接口规范)
+	内容：
+		connection、cursor、exceptions
+	python DB API访问数据库流程：
+	开始-->创建connection-->获取cursor-->
+	[执行查询、执行命令、获取数据、处理数据] -->关闭cursor-->
+	关闭connection-->结束
+
+Python MySql开发环境：
+	Python code 包含SQL语句 ----------->eclipse
+	Python-MySQL connector
+	MySQL服务器			------------>sqlYAg
+
+DB API connection:
+	连接对象：建立python客户端与数据库的网络连接
+	创建方法：MySQLdb.connect(参数)
+		host		字符串	MySQL服务器地址
+		port		数字		MySQL服务器端口号
+		user		字符串	用户名
+		password	字符串	密码
+		db			字符串	数据库名称
+		charset		字符串	连接编码
+	connecting对象的方法：
+		cursor()	使用该连接并返回游标
+		commit()	提交当前事务
+		rollback()	回滚当前事务
+		close()		关闭连接
+
+DB API 数据库游标对象粗cursor
+    游标对象：用于执行查询和获取对象
+    cursor方法：
+        execute(op[,args])      执行一个数据库查询命令
+            <fetch*()：移动rownumber，返回数据>
+        fetchone()              获取结果集的下一行
+        fetchmany(size)         获取结果集的下几行
+        fetchall()              获取结果集中剩下的所有行
+        rowcount()              最近一次execute返回数据的行数或影响行数
+        close()                 关闭游标对象
+
+    Select查询：
+        开始-->创建connection-->获取cursor-->cursor.execute()-->cursor.fetch*()
