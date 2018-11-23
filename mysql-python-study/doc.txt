@@ -42,3 +42,5 @@ DB API 数据库游标对象粗cursor
 
     Select查询：
         开始-->创建connection-->获取cursor-->cursor.execute()-->cursor.fetch*()
+
+    已完成
