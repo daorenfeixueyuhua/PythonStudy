@@ -12,7 +12,7 @@ ip_port = ('127.0.0.1',9999)
 sk.connect(ip_port)
 # 文件上传
 # 打开文件
-with open('doc.txt', 'rb') as f:
+with open('doc.md', 'rb') as f:
     # 按每一段分割文件
     for i in f:
         # 数据上传
