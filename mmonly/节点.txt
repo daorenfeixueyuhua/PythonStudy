@@ -1,0 +1,22 @@
+base_url: https://www.ammmi.com/category/dongmantupian
+
+x = response.xpath('//div[@class="mi_cont "]//ul/li/h3/a/@href').extract()
+
+下一列：
+base_url+'page/pagesize'
+
+图片种类名称：
+
+ x = response.xpath('//h2[@class="titletips"]/text()').extract_first()
+
+图片下载：
+
+x = response.xpath('//a[@class="NavLinks"]/@href').extract_first()
+
+picture_name = x[58:-4]
+
+web_name  = 'ammmi'
+
+save_directory= '../resource/' + web_name + '/' + title + '/' + picture_name + '.jpg'
+
+Item(title,picture_name,download_url,save_directory)

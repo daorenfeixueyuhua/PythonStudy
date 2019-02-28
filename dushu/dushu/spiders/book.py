@@ -2,6 +2,7 @@
 import scrapy
 from dushu.items import DushuItem
 
+
 class BookSpider(scrapy.Spider):
     name = 'book'
     # allowed_domains = ['xdushu.com']
