@@ -16,6 +16,7 @@ class DouyuPipeline(ImagesPipeline):
     IMAGES_STORE = get_project_settings().get("IMAGES_STORE")
 
     def get_media_requests(self, item, info):
+        print('====================================')
         # 获取图片连接
         image_url = item['imageLink']
         # 发送图片链接请求

@@ -21,7 +21,7 @@ class DouyuSpider(scrapy.Spider):
             item = DouyuItem()
             item['nickname'] = data['nickname']
             item['imageLink'] = data['vertical_src']
-            yield item
+            yield
 
         self.offset += 20
         yield scrapy.Request(self.url + str(self.offset), callback=self.parse)
